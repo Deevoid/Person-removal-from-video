@@ -18,21 +18,21 @@ function init() {
     c_out = document.getElementById("output-canvas");
     ctx_out = c_out.getContext("2d");
     c_tmp = document.createElement("canvas");
-    c_tmp.setAttribute("width", 800);
-    c_tmp.setAttribute("height", 450);
+    c_tmp.setAttribute("width", 500);
+    c_tmp.setAttribute("height", 300);
     ctx_tmp = c_tmp.getContext("2d");
     video.play();
     computeFrame();
 }
 
 function computeFrame() {
-ctx_tmp.drawImage(video,0,0,800,450);
-let frame = ctx_tmp.getImageData(0,0,800,450);
+ctx_tmp.drawImage(video,0,0,500,300);
+let frame = ctx_tmp.getImageData(0,0,500,300);
 model.segmentPerson(c_tmp,segmentationConfig).then((segmentation) => {
-let out_image = ctx_out.getImageData(0,0,800,450);
-for(let x=0;x<800;x++){
-for(y=0;y<450;y++) {
-let n = x + (y * 800);
+let out_image = ctx_out.getImageData(0,0,500,300);
+for(let x=0;x<500;x++){
+for(y=0;y<300;y++) {
+let n = x + (y * 500);
 if(segmentation.data[n] == 0) {
   out_image.data[n * 4] = frame.data[n * 4]; //R
   out_image.data[n * 4 + 1] = frame.data[n * 4 + 1]; //G

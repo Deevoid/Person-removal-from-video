@@ -18,23 +18,23 @@
 </header>
 <main>
 
-  <div class="selector my-5">
-    <h2 class="text-center">Select your video file and let the magic happen.</h2>
+  <div class="selector my-2">
+    <h4 class="text-center">Select your video file and let the magic happen.</h4>
     <form>
       <div class="form-group">
-        <input type="file" class="form-control-file form-control-lg" id="exampleFormControlFile1" accept="video/*" onchange="previewFile()">
+        <input type="file" class="form-control-file" id="exampleFormControlFile1" accept="video/*" onchange="previewFile()">
       </div>
     </form>
   </div>
   <div class="vid">
-    <video id="video" width="800" src="./video.mp4" muted loop controls></video>
-    <canvas id="output-canvas" width="800" height="450"></canvas>
+    <video id="video" width="500" src="./video.mp4" muted loop controls></video>
+    <canvas id="output-canvas" width="500" height="280"></canvas>
   </div>
 
-  <p class="blockquote text-center">The model learns from itself. Thus, the more the video will loop the more efficent the output will be.</p>
+  <p class="blockquote text-center">The model learns from itself. Thus, the more the video will loop the more efficient the output will be.</p>
 </main>
 
-<footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+<footer id="sticky-footer" class="py-1 bg-dark text-white-50">
   <div class="container text-center">
       <small>Created by Dev</small>
   </div>
