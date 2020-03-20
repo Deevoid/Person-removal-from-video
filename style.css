@@ -1,0 +1,23 @@
+body{
+    min-height: 100vh;
+    width: 100vw;
+    font-size: 2em;
+    display: flex;
+  flex-direction: column;
+}
+h1{
+    font-size: 4rem;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+}
+.vid{
+    display: flex;
+    justify-content: space-around;
+}
+main{
+    flex: 1 0 auto;
+}
